@@ -1,25 +1,26 @@
-# Email Signature Generator
+#Egnature - Email Sign Generator
 
-1. Introduction 
-    Egnature is a email signature generator tool,which is open source and free to use
+##Introduction 
+ Egnature is an email signature generator tool,which is open source and free to use
 
-2. Feature
-    a) Upload and Resize the profile image.
-    b) Easy to use with simply clicking on *Copy* button
+##Features
+- Drag n Drop / Upload and Resize the profile image.
+- Easy to use with simply clicking on *Copy* button
 ## How to Install and Run
-    1. clone and checkout the project.
-        `git clone asdfasdfasdf`
-    2. get into project folder and intall node modules.
+- Clone and checkout the project.
+        `git clone https://github.com/abhir9/Egnature`
+- Get into project folder and install node modules.
         `npm i`
-    3. start the project
+- Start and run the project
         `npm start`
 
-    Now project should be accessible over `http://localhost:3000`
+Now project should be accessible over `http://localhost:3000`
 
 ## How to contribute
+Please refer [Contribute Guideline](https://github.com/abhir9/Egnature/blob/master/CONTRIBUTING.md)
 
 ## Licence 
-    MIT
+[MIT](https://github.com/abhir9/Egnature/blob/master/LICENSE)
 
 
 
