@@ -1,0 +1,42 @@
+{
+  "name": "Egnature ",
+  "version": "0.1.0",
+  "description" : "Egnature is a email signature generator tool,which is open source and free to use",
+  "private": true,
+  "keywords" : ["email", "signature", "email-signature", "sign", "esign","opensource","lr","hacktoberfest","html","javascript","react","open-source","contributions-needed","hactoberfest2020"],
+    "dependencies": {
+    "react": "^16.11.0",
+    "react-avatar-editor": "^12.0.0-beta.0",
+    "react-dom": "^16.11.0",
+    "react-dropzone": "^10.1.10",
+    "react-scripts": "^3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://github.com/abhir9/Egnature",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhir9/Egnature.git"
+  },
+  "author" :"abhimanyu singh rathore",
+  "license": "MIT"
+}
