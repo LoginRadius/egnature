@@ -1,7 +1,7 @@
 #Egnature - Email Sign Generator
 
-##Introduction 
- Egnature is an email signature generator tool,which is open source and free to use
+##Introduction
+Egnature is an email signature generator tool,which is open source and free to use
 
 ##Features
 - Drag n Drop / Upload and Resize the profile image.
