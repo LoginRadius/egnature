@@ -9,7 +9,7 @@ Egnature is an email signature generator tool,which is open source and free to u
 
 ## How to Install and Run
 - Clone and checkout the project.
-        `git clone https://github.com/abhir9/Egnature`
+        `git clone https://github.com/LoginRadius/Egnature`
 - Get into project folder and install node modules.
         `npm i`
 - Start and run the project
@@ -18,10 +18,10 @@ Egnature is an email signature generator tool,which is open source and free to u
 Now project should be accessible over `http://localhost:3000`
 
 ## How to contribute
-Please refer [Contribute Guideline](https://github.com/abhir9/Egnature/blob/master/CONTRIBUTING.md)
+Please refer [Contribute Guideline](https://github.com/LoginRadius/Egnature/blob/master/CONTRIBUTING.md)
 
 ## Licence 
-[MIT](https://github.com/abhir9/Egnature/blob/master/LICENSE)
+[MIT](https://github.com/LoginRadius/Egnature/blob/master/LICENSE)
 
 
 

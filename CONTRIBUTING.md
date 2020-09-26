@@ -1,7 +1,7 @@
 # Contribution Guide
 
-If you have any comment or advice, please report your [issue](https://github.com/abhir9/Egnature/issues),
-or make any change as you wish and submit a [PR](https://github.com/abhir9/Egnature/pulls).
+If you have any comment or advice, please report your [issue](https://github.com/LoginRadius/Egnature/issues),
+or make any change as you wish and submit a [PR](https://github.com/LoginRadius/Egnature/pulls).
 
 ## Reporting New Issues
 
@@ -45,7 +45,7 @@ $ git commit -m "fix(role): role.use must xxx"
 $ git push origin branch-name
 ```
 
-Then you can create a Pull Request at [Egnature](https://github.com/abhir9/Egnature/pulls)
+Then you can create a Pull Request at [Egnature](https://github.com/LoginRadius/Egnature/pulls)
 
 No one can garantee how much will be remembered about certain PR after some time. To make sure we can easily recap what happened previously, please provide the following information in your PR.
 
