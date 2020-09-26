@@ -40,6 +40,7 @@ class App extends React.Component {
   };
   onClickSave = () => {
     if (this.editor) {
+      this.setState({ editableItem: "" });
       let canvas = document.getElementById("myCanvas");
       const canvasScaled = this.editor.getImageScaledToCanvas();
       const ctx = canvas.getContext("2d");
