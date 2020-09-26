@@ -32,10 +32,10 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://github.com/abhir9/Egnature",
+  "homepage": "https://github.com/LoginRadius/Egnature",
   "repository": {
     "type": "git",
-    "url": "https://github.com/abhir9/Egnature.git"
+    "url": "https://github.com/LoginRadius/Egnature.git"
   },
   "author" :"abhimanyu singh rathore",
   "license": "MIT"
