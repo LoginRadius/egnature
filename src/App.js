@@ -272,6 +272,7 @@ class App extends React.Component {
                                   <a
                                   href={`https://${websiteurl}`}
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   style={{
                                     color: "#2299dd",
                                     textDecoration: "none",
@@ -325,15 +326,15 @@ class App extends React.Component {
                           borderTop: "1px solid #b7b5b5"
                         }}
                       >
-                        <a
-                          target="_blank"
+                        <span
                           style={{ display: "flex", alignItems: "center" }}
                         >
                           <img
+                            alt="Logo"
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAAAbCAYAAACUXxrzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALrSURBVGhD7ZoxTyJREMf/nBiIMVlyFnYchViYI6HGeNTcRb6BoVtLbfweUGprZ3lGqe/MWXtiLDwKjs5CwiZywbCGm7c7rA9Ewt4VzJL9JcbZcXaK9995M2/XSJ9AiHje8e8ZYKNas7Bb66LOnpC3mVlFVS/u8bnh2rnsCn5kou5FyFhmWFEhfgiFCgihUAEhFCogyBXK6qJy0ULk+J5/Wti8mDAhWjRFUvzm6SDevWe3ZnPACH7zzxiRQtWbFja/Wthv9Nij6OGyYSF92nm1mG78A02RFNNmp0MPR1cPiJxaqFjsIvzml4A8oawOSt+6uOTLV7QfUdKrhBY9PSle0e7ipMn3+M0vBGFC2ah8f3xZxEQc58VV9HdW8Su7yE7Qk//ETz3F/+w6lgPFl4srTnx/ZwXlFPs9/OaXgyyhrCeceFvXIsqfDBQM92otswTTNempf8KZ2sqaHex78bTo2wb2jMHBOYp1thQfld9vfkEIE8rWnvYYvvAiukSxkWCT+sktLWT1t1ZNqRgKbLrYuNNE2VC5fOaXhCih6tYzW0RiAWtsToP5Ic7WABu3nlALWCdR/if/rJE3TEyFqhC9YsZAotywiUQUaTangytQEKKEWjMW2CLaz8MNfai/qAqhHuRtVcANbWs61WttaGD85WdTCLIqKhnTGro2JqvDqT6tcT9KJ7RJ7aqDqtNX1OeTlvdmfgif+SUh7jOH7h8PTWvF9zTdKbuL3WMLR45/AikD/S23h/nLLwcRFeWMzkxhi84/2pY2ipnXFzGOw/zoEDEZf/nlMDOh1IKdZ+MwswYOkux0iGJv2/1bjj2KHB9OD4diiSRVS3EZpr74Kja/7N2fo2HiBZ/5hTC3/zNRpz6VvnLf5Zl5uQJMS0DH88mol64lFkniqP0vBLqi9Kp5E22QCDIBrigbZ0OfKcag+s4ciKQIdo9S55/rPzhR36HY5UDnKzO1hINMPFCviSYxt8PEvDGXw8T8AfwFc6VfhaDmE1wAAAAASUVORK5CYII="
                             width="100px"
                           />
-                        </a>
+                        </span>
                       </div>
                     </td>
                   </tr>
