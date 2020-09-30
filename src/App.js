@@ -183,7 +183,8 @@ class App extends React.Component {
                             >
                               {editableItem !== "fullName" && (
                                 <label
-                                  onClick={(e) => {
+                                    className={`${!this.editor ? 'label-styles' : ''}`}
+                                    onClick={(e) => {
                                     e.stopPropagation();
                                     if (!finalImage) {
                                       this.setState({
@@ -225,7 +226,8 @@ class App extends React.Component {
                               >
                                 {editableItem !== "title" && (
                                   <label
-                                    onClick={(e) => {
+                                      className={`${!this.editor ? 'label-styles' : ''}`}
+                                      onClick={(e) => {
                                       e.stopPropagation();
                                       if (!finalImage) {
                                         this.setState({
@@ -282,7 +284,8 @@ class App extends React.Component {
                                   {websiteurl}
                                 </a>:<label
                                 style={{textTransform: "lowercase"}}
-                                  onClick={e => {
+                                className={`${!this.editor ? 'label-styles' : ''}`}
+                                onClick={e => {
                                     e.stopPropagation();
                                     if(!finalImage)
                                     {this.setState({ editableItem: "websiteurl" });}
