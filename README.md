@@ -23,7 +23,10 @@ Egnature is an email signature generator tool,which is open source and free to u
    $ npm start
 ```
 
-Now project should be accessible over `http://localhost:3000`
+Now project should be accessible over
+```bash
+   http://localhost:3000
+```
 
 ## How to contribute
 Please refer [Contribute Guideline](https://github.com/LoginRadius/Egnature/blob/master/CONTRIBUTING.md)
