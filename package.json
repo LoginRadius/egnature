@@ -1,10 +1,25 @@
 {
   "name": "Egnature ",
   "version": "0.1.0",
-  "description" : "Egnature is a email signature generator tool,which is open source and free to use",
+  "description": "Egnature is a email signature generator tool,which is open source and free to use",
   "private": true,
-  "keywords" : ["email", "signature", "email-signature", "sign", "esign","opensource","lr","hacktoberfest","html","javascript","react","open-source","contributions-needed","hactoberfest2020"],
-    "dependencies": {
+  "keywords": [
+    "email",
+    "signature",
+    "email-signature",
+    "sign",
+    "esign",
+    "opensource",
+    "lr",
+    "hacktoberfest",
+    "html",
+    "javascript",
+    "react",
+    "open-source",
+    "contributions-needed",
+    "hactoberfest2020"
+  ],
+  "dependencies": {
     "react": "^16.11.0",
     "react-avatar-editor": "^12.0.0-beta.0",
     "react-dom": "^16.11.0",
@@ -37,6 +52,6 @@
     "type": "git",
     "url": "https://github.com/LoginRadius/Egnature.git"
   },
-  "author" :"abhimanyu singh rathore",
+  "author": "abhimanyu singh rathore",
   "license": "MIT"
 }
