@@ -17,7 +17,6 @@ class App extends React.Component {
       websiteurl: "www.loginradius.com",
       editableItem: "",
       isCopied: false,
-      isFinished: false,
     };
   }
   // This function will return data of image url (base64)
@@ -354,7 +353,7 @@ class App extends React.Component {
                               {editableItem !== "fullName" && (
                                 <label
                                   className={`${
-                                    !this.state.isFinished ? "label-styles" : ""
+                                    !this.editor ? "label-styles" : ""
                                   }`}
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -393,14 +392,13 @@ class App extends React.Component {
                                 style={{
                                   fontSize: "16px",
                                   minWidth: "200px",
-                                  paddingTop: 6,
-                                  color: "rgb(180,180,180)",
+                                  color: "#b7b5b5",
                                 }}
                               >
                                 {editableItem !== "title" && (
                                   <label
                                     className={`${
-                                      !this.state.isFinished ? "label-styles" : ""
+                                      !this.editor ? "label-styles" : ""
                                     }`}
                                     onClick={(e) => {
                                       e.stopPropagation();
@@ -440,8 +438,8 @@ class App extends React.Component {
                                   fontSize: "16px",
                                   minWidth: "200px",
                                   borderTop: "1px solid",
-                                  paddingTop: 8,
-                                  color: "rgb(180,180,180)",
+                                  paddingTop: 6,
+                                  color: "#b7b5b5",
                                 }}
                               >
                                 {editableItem !== "websiteurl" &&
@@ -462,7 +460,7 @@ class App extends React.Component {
                                     <label
                                       style={{ textTransform: "lowercase" }}
                                       className={`${
-                                        !this.state.isFinished ? "label-styles" : ""
+                                        !this.editor ? "label-styles" : ""
                                       }`}
                                       onClick={(e) => {
                                         e.stopPropagation();
@@ -516,7 +514,7 @@ class App extends React.Component {
                             <img
                               onError={(e) => (e.target.src = this.state.logo)}
                               src={this.state.logo}
-                              height="27px"
+                              height="27"
                               alt="Logo"
                               style={{
                                 verticalAlign: "bottom",
@@ -567,7 +565,7 @@ class App extends React.Component {
               style={{
                 marginTop: "30px",
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "center",
               }}
             >
               {!finalImage && (
