@@ -7,8 +7,8 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-avatar-editor": "^12.0.0-beta.0",
-    "react-dom": "^16.11.0",
-    "react-dropzone": "^10.1.10",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.0",
     "react-scripts": "^3.4.3"
   },
   "scripts": {
@@ -27,7 +27,7 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
+      "last 1 chrome version",  
       "last 1 firefox version",
       "last 1 safari version"
     ]
