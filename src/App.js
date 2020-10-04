@@ -320,6 +320,7 @@ class App extends React.Component {
                       {/* import image from url */}
                       <input
                         type="text"
+                        name="imageUrl"
                         style={{
                           margin: 5,
                           borderRadius: 3,
