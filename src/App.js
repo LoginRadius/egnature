@@ -516,7 +516,7 @@ class App extends React.Component {
                             <img
                               onError={(e) => (e.target.src = this.state.logo)}
                               src={this.state.logo}
-                              height="27"
+                              height="27px"
                               alt="Logo"
                               style={{
                                 verticalAlign: "bottom",
