@@ -20,7 +20,7 @@ class App extends React.Component {
     };
   }
   onCopy = () => {
-    var doc = document,
+    let doc = document,
       signature = doc.getElementById("signature"),
       range,
       selection;
@@ -61,6 +61,13 @@ class App extends React.Component {
     }
   };
 
+  handleChange =(e) => {
+                e.stopPropagation();
+                this.setState({ editableItem: "" });
+              }
+
+   stopPropagation = (e) => e.stopPropagation()    
+
   setEditorRef = (editor) => (this.editor = editor);
   render() {
     let {
@@ -90,10 +97,7 @@ class App extends React.Component {
                 marginBottom: "30px",
                 borderSpacing: 0
               }}
-              onClick={(e) => {
-                e.stopPropagation();
-                this.setState({ editableItem: "" });
-              }}
+              onClick={this.handleChange}
             >
               <table
                 width="600"
@@ -163,8 +167,8 @@ class App extends React.Component {
                                     scale={this.state.scrollValue}
                                     rotate={0}
                                     borderRadius={90}
-                                    onDragEnd={(e) => e.stopPropagation()}
-                                    onMouseUp={(e) => e.stopPropagation()}
+                                    onDragEnd={this.stopPropagation}
+                                    onMouseUp={this.stopPropagation}
                                   />
                                 </div>
                               </section>
@@ -254,9 +258,7 @@ class App extends React.Component {
                                     onBlur={() =>
                                       this.setState({ editableItem: "" })
                                     }
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                    }}
+                                    onClick={this.stopPropagation}
                                     onChange={(e) => {
                                       this.setState({ title: e.target.value });
                                     }}
@@ -310,9 +312,7 @@ class App extends React.Component {
                                     onBlur={() =>
                                       this.setState({ editableItem: "" })
                                     }
-                                    onClick={e => {
-                                      e.stopPropagation();
-                                    }}
+                                    onClick={this.stopPropagation}
                                     onChange={e => {
                                       this.setState({ websiteurl: e.target.value });
                                     }}
