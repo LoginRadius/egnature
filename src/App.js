@@ -17,7 +17,22 @@ class App extends React.Component {
       websiteurl: "www.loginradius.com",
       editableItem: "",
       isCopied: false,
+      isFinished: false,
     };
+  }
+  // This function will return data of image url (base64)
+  toDataURL(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", url);
+    xhr.responseType = "blob";
+    xhr.onload = function () {
+      var fr = new FileReader();
+      fr.onload = function () {
+        callback(fr.result);
+      };
+      fr.readAsDataURL(xhr.response);
+    };
+    xhr.send();
   }
   onCopy = () => {
     var doc = document,
@@ -64,6 +79,7 @@ class App extends React.Component {
   setEditorRef = (editor) => (this.editor = editor);
   render() {
     let {
+      isFinished,
       finalImage,
       fullName,
       title,
@@ -201,18 +217,22 @@ class App extends React.Component {
               </g>
             </svg>
           </div>
-          <h1>Email Signature Generator</h1>
-          <p>
-            Generate your email signature by just uploading a Photo, entering
-            Name and Designation. Copy and Paste the signature in your email and
-            you are good to go !
-          </p>
+
+          <div className="headText">
+            <h1>Email Signature Generator</h1>
+            <p>
+              Generate your Email Signature by just uploading your Name, Photo
+              and Designation. Copy and Paste the signature in your Email and
+              you are good to go!
+            </p>
+          </div>
           <div className="test">
             <div
               id="signature"
               style={{
                 fontFamily: "Arial, Helvetica, sans-serif",
-                margin: 0,
+                marginTop: "-30px",
+                marginBottom: "30px",
                 borderSpacing: 0,
               }}
               onClick={(e) => {
@@ -270,6 +290,7 @@ class App extends React.Component {
                                 };
                                 reader.onerror = function (error) {};
                               } else {
+                                alert("Please upload a valid Image file!");
                               }
                             }}
                           >
@@ -295,6 +316,26 @@ class App extends React.Component {
                           </Dropzone>
                         </div>
                       )}
+
+                      {/* import image from url */}
+                      <input
+                        type="text"
+                        style={{
+                          margin: 5,
+                          borderRadius: 3,
+                          border: "1px solid gray",
+                          padding: 5,
+                          fontSize: 10,
+                          display: isFinished ? "none" : "block",
+                        }}
+                        placeholder="Enter Image URL/Link"
+                        onChange={(result) => {
+                          this.toDataURL(result.target.value, (data) => {
+                            this.setState({ image: data });
+                          });
+                        }}
+                      />
+                      {/* end of import image from url */}
                     </td>
                     <td
                       style={{ padding: "0", textAlign: "left" }}
@@ -305,7 +346,7 @@ class App extends React.Component {
                           <tr>
                             <td
                               style={{
-                                fontSize: "18px",
+                                fontSize: "20px",
                                 fontWeight: "normal",
                                 display: "block",
                               }}
@@ -350,9 +391,10 @@ class App extends React.Component {
                             <td style={{ padding: 0 }}>
                               <div
                                 style={{
-                                  fontSize: "14px",
+                                  fontSize: "16px",
                                   minWidth: "200px",
-                                  color: "#b7b5b5",
+                                  paddingTop: 6,
+                                  color: "rgb(180,180,180)",
                                 }}
                               >
                                 {editableItem !== "title" && (
@@ -395,11 +437,11 @@ class App extends React.Component {
                             <td style={{ padding: 0 }}>
                               <div
                                 style={{
-                                  fontSize: "14px",
+                                  fontSize: "16px",
                                   minWidth: "200px",
                                   borderTop: "1px solid",
-                                  paddingTop: 6,
-                                  color: "#b7b5b5",
+                                  paddingTop: 8,
+                                  color: "rgb(180,180,180)",
                                 }}
                               >
                                 {editableItem !== "websiteurl" &&
@@ -523,9 +565,9 @@ class App extends React.Component {
 
             <div
               style={{
-                marginTop: "50px",
+                marginTop: "30px",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-around",
               }}
             >
               {!finalImage && (
@@ -546,7 +588,10 @@ class App extends React.Component {
                   <input
                     type="button"
                     value="Done"
-                    onClick={() => this.onClickSave()}
+                    onClick={() => {
+                      this.onClickSave();
+                      this.setState({ isFinished: !this.isFinished });
+                    }}
                   />
                 </div>
               )}
@@ -557,7 +602,11 @@ class App extends React.Component {
                     type="button"
                     value="Back"
                     onClick={() =>
-                      this.setState({ finalImage: "", isCopied: false })
+                      this.setState({
+                        finalImage: "",
+                        isCopied: false,
+                        isFinished: false,
+                      })
                     }
                   />
                   <input
