@@ -47,7 +47,7 @@ $ git push origin branch-name
 
 Then you can create a Pull Request at [Egnature](https://github.com/LoginRadius/Egnature/pulls)
 
-No one can garantee how much will be remembered about certain PR after some time. To make sure we can easily recap what happened previously, please provide the following information in your PR.
+No one can guarantee how much will be remembered about certain PR after some time. To make sure we can easily recap what happened previously, please provide the following information in your PR.
 
 1. Need: What function you want to achieve (Generally, please point out which issue is related).
 2. Updating Reason: Different with issue. Briefly describe your reason and logic about why you need to make such modification.

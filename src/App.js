@@ -74,18 +74,20 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="app-inner">
-          <h1>Email Signature Generator</h1>
+        <div className="headText">
+          <h1 >Email Signature Generator</h1>
           <p>
-            Generate your email signature by just uploading a Photo, entering
-            Name and Designation. Copy and Paste the signature in your email and
-            you are good to go !
+            Generate your Email Signature by just uploading your Name, Photo and Designation. 
+            Copy and Paste the signature in your Email and you are good to go!
           </p>
+          </div>
           <div className="test">
             <div
               id="signature"
               style={{
                 fontFamily: "Arial, Helvetica, sans-serif",
-                margin: 0,
+                marginTop: "-30px",
+                marginBottom: "30px",
                 borderSpacing: 0
               }}
               onClick={(e) => {
@@ -140,9 +142,11 @@ class App extends React.Component {
                                 reader.readAsDataURL(file[0]);
                                 reader.onload = function () {
                                   that.setState({ image: reader.result });
+                                  
                                 };
                                 reader.onerror = function (error) {};
                               } else {
+                                alert("Please upload a valid Image file!");
                               }
                             }}
                           >
@@ -178,7 +182,7 @@ class App extends React.Component {
                           <tr>
                             <td
                               style={{
-                                fontSize: "18px",
+                                fontSize: "20px",
                                 fontWeight: "normal",
                                 display: "block"
                               }}
@@ -221,9 +225,10 @@ class App extends React.Component {
                             <td style={{ padding: 0 }}>
                               <div
                                 style={{
-                                  fontSize: "14px",
+                                  fontSize: "16px",
                                   minWidth: "200px",
-                                  color: "#b7b5b5"
+                                  paddingTop: 6,
+                                  color: "rgb(180,180,180)"
                                 }}
                               >
                                 {editableItem !== "title" && (
@@ -264,11 +269,11 @@ class App extends React.Component {
                             <td style={{ padding: 0 }}>
                               <div
                                 style={{
-                                  fontSize: "14px",
+                                  fontSize: "16px",
                                   minWidth: "200px",
                                   borderTop: "1px solid",
-                                  paddingTop: 6,
-                                  color: "#b7b5b5"
+                                  paddingTop: 8,
+                                  color: "rgb(180,180,180)"
                                 }}
                               >
                                 
@@ -331,8 +336,9 @@ class App extends React.Component {
                           borderTop: "1px solid #b7b5b5"
                         }}
                       >
+              
                         <span
-                          style={{ display: "flex", alignItems: "center" }}
+                          style={{ display: "flex", alignItems: "center"}}
                         >
                       {finalImage && (
                            <img
@@ -387,14 +393,16 @@ class App extends React.Component {
 
             <div
               style={{
-                marginTop: "50px",
+                marginTop: "30px",
                 display: "flex",
-                justifyContent: "center"
+                justifyContent: "space-around"
               }}
             >
+            
               {!finalImage && (
                 <div style={{ display: "flex" }}>
                   {" "}
+                  
                   <input
                     type="range"
                     step="0.01"
