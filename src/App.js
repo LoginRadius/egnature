@@ -16,9 +16,24 @@ class App extends React.Component {
       title: "SEO Manager",
       websiteurl: "www.loginradius.com",
       editableItem: "",
-      isCopied: false
+      isCopied: false,
+      isFinished: false
     };
   }
+  // This function will return data of image url (base64)
+  toDataURL(url, callback){
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', url);
+    xhr.responseType = 'blob';
+    xhr.onload = function(){
+      var fr = new FileReader();
+      fr.onload = function(){
+        callback(fr.result);
+      };
+      fr.readAsDataURL(xhr.response);
+    };
+    xhr.send();
+}
   onCopy = () => {
     var doc = document,
       signature = doc.getElementById("signature"),
@@ -64,6 +79,7 @@ class App extends React.Component {
   setEditorRef = (editor) => (this.editor = editor);
   render() {
     let {
+      isFinished,
       finalImage,
       fullName,
       title,
@@ -172,6 +188,24 @@ class App extends React.Component {
                           </Dropzone>
                         </div>
                       )}
+
+                      {/* import image from url */}
+                      <input type="text" style={{
+                        margin: 5,
+                        borderRadius: 3,
+                        border: '1px solid gray',
+                        padding: 5,
+                        fontSize: 10,
+                        display: isFinished ? 'none' : 'block'
+                      }}
+                      placeholder="Enter Image URL/Link"
+                      onChange={(result) => {
+                          this.toDataURL(result.target.value, (data) => {
+                            this.setState({image: data})
+                          })
+                      }} />
+                      {/* end of import image from url */}
+
                     </td>
                     <td
                       style={{ padding: "0", textAlign: "left" }}
@@ -418,7 +452,10 @@ class App extends React.Component {
                   <input
                     type="button"
                     value="Done"
-                    onClick={() => this.onClickSave()}
+                    onClick={() => {
+                      this.onClickSave()
+                      this.setState({isFinished: !this.isFinished})
+                    }}
                   />
                 </div>
               )}
@@ -429,7 +466,7 @@ class App extends React.Component {
                     type="button"
                     value="Back"
                     onClick={() =>
-                      this.setState({ finalImage: "", isCopied: false })
+                      this.setState({ finalImage: "", isCopied: false, isFinished: false })
                     }
                   />
                   <input
