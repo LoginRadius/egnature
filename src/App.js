@@ -354,7 +354,7 @@ class App extends React.Component {
                               {editableItem !== "fullName" && (
                                 <label
                                   className={`${
-                                    !this.editor ? "label-styles" : ""
+                                    !this.state.isFinished ? "label-styles" : ""
                                   }`}
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -400,7 +400,7 @@ class App extends React.Component {
                                 {editableItem !== "title" && (
                                   <label
                                     className={`${
-                                      !this.editor ? "label-styles" : ""
+                                      !this.state.isFinished ? "label-styles" : ""
                                     }`}
                                     onClick={(e) => {
                                       e.stopPropagation();
@@ -462,7 +462,7 @@ class App extends React.Component {
                                     <label
                                       style={{ textTransform: "lowercase" }}
                                       className={`${
-                                        !this.editor ? "label-styles" : ""
+                                        !this.state.isFinished ? "label-styles" : ""
                                       }`}
                                       onClick={(e) => {
                                         e.stopPropagation();
