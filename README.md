@@ -3,6 +3,12 @@
 ## Introduction
 Egnature is an Email Signature generator tool, which is Open source and free to use.
 
+## Contributing 
+
+All you need to know for contributing to this project is basic **JavaScript**.
+
+You can visit the issues page to find some relevant issues to contribute to or feel free to open a new issue for something that you think can be improved.
+
 ## Features
 
 - Add your Name, Designation and Website
