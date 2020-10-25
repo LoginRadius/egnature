@@ -1,12 +1,17 @@
 .App {
-  text-align: center;
+  /* text-align: center;
   max-width: 600px;
   margin: 0 auto;
   height: 100vh;
   display: flex;
+  align-items: center; */
+}
+.header{
+  background-color: #000;
+  min-height: 80px;
+  display: flex;
   align-items: center;
 }
-
 .App-logo {
   height: 40vmin;
 }
@@ -21,14 +26,33 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.headText h1{
-  color: #125086
+.headTextMain{
+  color: #41484e;
+  padding: 40px 0;
 }
-
+.headTextMain p{
+  font-weight: 400;
+  max-width: 75%;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #41484e;
+}
+.headTextMain h1{
+  color: #41484e;
+  margin-top: 0;
+}
+.headText span{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
 .headText p{
-  font-weight: 500;
+color: #fff;
+margin: 5px 0 0 0;
+font-size: 14px;
 }
+
 
 .App-link {
   color: #09d3ac;
@@ -74,8 +98,8 @@ input[type="range"]::-ms-track {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  width: 12px;
+  border-radius: 12px;
   background: #0f3352;
   cursor: pointer;
   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
@@ -84,8 +108,8 @@ input[type="range"]::-webkit-slider-thumb {
 /* All the same stuff for Firefox */
 input[type="range"]::-moz-range-thumb {
   height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  width: 12px;
+  border-radius: 12px;
   background: #0f3352;
   cursor: pointer;
 }
@@ -93,17 +117,17 @@ input[type="range"]::-moz-range-thumb {
 /* All the same stuff for IE */
 input[type="range"]::-ms-thumb {
   height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  width: 12px;
+  border-radius: 12px;
   background: #0f3352;
   cursor: pointer;
 }
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8.4px;
+  height: 8px;
   cursor: pointer;
   background: #2299dd;
-  border-radius: 1.3px;
+  border-radius: 8px;
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
@@ -112,15 +136,16 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 input[type="range"]::-moz-range-track {
   width: 100%;
-  height: 8.4px;
+  height: 8px;
   cursor: pointer;
   background: #2299dd;
-  border-radius: 1.3px;
+  border-radius: 8px;
 }
 
 input[type="range"]::-ms-track {
   width: 100%;
-  height: 8.4px;
+  width: 100%;
+  height: 8px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
@@ -143,7 +168,9 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 #signature {
   background: #fff;
-  box-shadow: 0 0 30px rgba(16, 14, 23, 0.25);
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgb(0 0 0 / 10%);
   
 }
 h1 {
@@ -152,8 +179,7 @@ h1 {
 }
 p {
   text-align: left;
-  margin-top: 5px;
-  margin-bottom: 75px;
+  color: #fff;
 }
 canvas {
   vertical-align: bottom;
@@ -192,14 +218,51 @@ table table tr td input[type="text"] {
   text-align: left;
 }
 .logo svg {
-  max-width: 200px;
+  max-width: 180px;
 }
 .st0 {
-  fill: #050038;
+  fill: #fff;
 }
 .logo {
   text-align: left;
 }
-.logo svg {
-  max-width: 200px;
+
+.container{
+  width: 992px;
+  margin: 0 auto;
+}
+.app-inner {
+  max-width: 992px;
+  margin: 0 auto;
+}
+.app-inner-wrap {
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 0 24px 0;
+}
+.headText {
+  background: #073857;
+  padding: 16px 24px;
+  border-radius: 4px 4px 0 0;
+}
+.signature-wrap{
+  padding: 24px;
+}
+.action-bar {
+  background: #f9f9f9;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.gmail-steps ol{
+  padding: 0 0 0 18px;
+  margin: 0;
+  line-height: 24px;
+  color: #41484e;
+}
+.gmail-steps ol li{
+  margin: 0 0 24px 0;
 }
