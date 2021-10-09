@@ -167,7 +167,6 @@ input[type="range"]:focus::-ms-fill-upper {
   background: #2299dd;
 }
 #signature {
-  background: #fff;
   max-width: 600px;
   margin: 0 auto;
   border: 1px solid rgb(0 0 0 / 10%);
