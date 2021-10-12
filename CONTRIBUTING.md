@@ -16,7 +16,7 @@ or make any change as you wish and submit a [PR](https://github.com/LoginRadius/
 ### Useful Tags
 
 - `support`: the issue asks helps from developers of our group. If you need helps to locate and handle problems or have any idea to improve Egnature, mark it as `support`.
-- `bug`: if you find a problem which possiblly could be a bug, please tag it as `bug`. Then our group members will review that issue. If it is confirmed as a bug by our group member, this issue will be tagged as `confirmed`.
+- `bug`: if you find a problem which possibly could be a bug, please tag it as `bug`. Then our group members will review that issue. If it is confirmed as a bug by our group member, this issue will be tagged as `confirmed`.
   - A confirmed bug will be resolved prior.
   - If the bug has negative impact on running online application, it will be tagged as `critical`, which refers to top priority, and will be fixed ASAP!
   - A bug will be fixed from lowest necessary version, e.g. A bug needs to be fixed from 0.9.x, then this issue will be tagged as `0.9`, `0.10`, `1.0`, `1.1`, referring that the bug is required to be fixed in those versions.
@@ -39,7 +39,7 @@ If you are developer of egnature repo and you are willing to contribute, feel fr
 # Create a new branch for development. The name of branch should be semantic, avoiding words like 'update' or 'tmp'. We suggest to use feature/xxx, if the modification is about to implement a new feature.
 $ git checkout -b branch-name
 
-# If your modification pass the tests, congradulations it's time to push your work back to us. Notice that the commit message should be wirtten in the following format.
+# If your modification pass the tests, congratulations it's time to push your work back to us. Notice that the commit message should be wirtten in the following format.
 $ git add . # git add -u to delete files
 $ git commit -m "fix(role): role.use must xxx"
 $ git push origin branch-name
@@ -126,7 +126,7 @@ Egnature uses semantic versioning in release process based on [semver].
 `master` branch is the latest stable version. `next` branch is the next stable version working in progress.
 
 - All new features will be added into `master` or `next` branch as well as all bug-fix except security issues. In such way, we can motivate developers to update to the latest stable version.
-- If any API is discarded, it should be noted with `deprecate` in current stable version. The old version of API should be compatiable until the release of next stable version.
+- If any API is discarded, it should be noted with `deprecate` in current stable version. The old version of API should be compatible until the release of next stable version.
 - `master` branch doesn't have publish tag. High-level framework can work with stable versions defined by semantic versioning.
 - `next` branch is labelled with `next` tag, high-level framework can use `egnature@next` to test the in-progress version.
 - The LTS versions of Egnature determined by Milestone. If a version is listed in Milestone, then it is a LTS version. We will patch it if there is any problem with it.
