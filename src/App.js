@@ -21,11 +21,13 @@ class App extends React.Component {
 
   onClickSave = () => {
     if (this.editor) {
-      this.setState({ editableItem: "" });
+      this.setState({ editableItem: null });
+      let canvas = document.getElementById("myCanvas");
       const canvasScaled = this.editor.getImageScaledToCanvas();
       // TODO: Ref can be used instead of doc.getElem...Id
       let canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       let that = this;
       let img = new Image();
       img.onload = function () {
@@ -96,7 +98,7 @@ class App extends React.Component {
                         {finalImage && (
                           <img
                             onError={(e) => (e.target.src = "unnamed.png")}
-                            src={this.state.finalImage || "unnamed.png"}
+                            src={finalImage}
                             width="90"
                             height="90"
                             alt="profile pic"
@@ -141,7 +143,11 @@ class App extends React.Component {
                                       position={this.state.position}
                                       onDragEnd={(e) => e.stopPropagation()}
                                       onMouseUp={(e) => e.stopPropagation()}
-                                      onPositionChange={(e) => this.setState({position:{x:e.x, y:e.y}})}
+                                      onPositionChange={(e) =>
+                                        this.setState({
+                                          position: { x: e.x, y: e.y },
+                                        })
+                                      }
                                     />
                                   </div>
                                 </section>
@@ -437,7 +443,7 @@ class App extends React.Component {
                       value="Back"
                       onClick={() =>
                         this.setState({
-                          finalImage: "",
+                          finalImage: null,
                           isCopied: false,
                           isFinished: false,
                         })
